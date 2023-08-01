@@ -1,62 +1,62 @@
 .country {
-    list-style-type: none;
-    width: 200px;
-    background-color: var(--bg-dark);
-    border-radius: 4px;
+  list-style-type: none;
+  width: 200px;
+  background-color: var(--bg-dark);
+  border-radius: 4px;
 }
 
 .country:nth-child(3n + 1) {
-    background-color: var(--bg-dark-2);
+  background-color: var(--bg-dark-2);
 }
 
 .country a {
-    text-decoration: none;
-    position: relative;
+  text-decoration: none;
+  position: relative;
 }
 
 .country figure {
-    display: flex;
-    flex-flow: column;
-    max-width: 220px;
-    margin: 0.5rem auto;
+  display: flex;
+  flex-flow: column;
+  max-width: 220px;
+  margin: 0.5rem auto;
 }
 
 .country img {
-    max-width: 100%;
-    min-height: 130px;
-    filter: grayscale(1);
-    opacity: 0.5;
-    transition: 0.2s;
+  max-width: 100%;
+  min-height: 130px;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: 0.2s;
 }
 
 .country img:hover {
-    filter: grayscale(0);
-    opacity: 1;
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 .country figcaption {
-    color: #fff;
-    font: italic smaller sans-serif;
-    font-size: 1.4rem;
-    padding-top: 5px;
-    text-align: center;
-    font-family: inherit;
+  color: #fff;
+  font: italic smaller sans-serif;
+  font-size: 1.4rem;
+  padding-top: 5px;
+  text-align: center;
+  font-family: inherit;
 }
 
 .population {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.5rem;
-    line-height: 1.5;
-    margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
 }
 
 .population span {
-    margin: 0 0.5rem;
+  margin: 0 0.5rem;
 }
 
 .unit {
-    font-size: 0.8rem;
-    opacity: 0.8;
+  font-size: 0.8rem;
+  opacity: 0.8;
 }

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/homePage.module.css';
 import CountryCard from '../components/Home/CountryCard';
-import Header from '../components/Header/Header';
 
 const HomePage = ({ countries }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,7 +12,6 @@ const HomePage = ({ countries }) => {
 
   return (
     <>
-      <Header title="Countries" />
       <section>
         <input
           type="search"
