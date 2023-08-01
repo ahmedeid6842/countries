@@ -1,8 +1,23 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomPage';
+import CountryDetailsPage from './pages/CountryDetailsPage';
+import { getCountries } from './redux/countries-slice';
 import './styles/App.css';
 
 function App() {
+
   return (
-    <h1>countries</h1>
+
+    <>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage countries={state} />} />
+          <Route path="/:countryName" element={<CountryDetailsPage />} />
+        </Routes>
+      </main>
+    </>
   );
 }
 
