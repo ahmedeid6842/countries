@@ -7,7 +7,6 @@ import { getCountries } from './redux/countries-slice';
 import './styles/App.css';
 
 function App() {
-
   const dispatch = useDispatch();
   const state = useSelector((state) => state.countries.countries);
 
