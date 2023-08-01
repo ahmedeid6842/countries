@@ -1,28 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import styles from '../styles/homePage.module.css';
+import CountryCard from '../components/Home/CountryCard';
 
 const HomePage = ({ countries }) => {
-  console.log(countries);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredCountries = countries.filter((country) => Object.values(country)
+    .filter((value) => typeof value === 'string')
+    .some((value) => value.toLowerCase().includes(searchTerm.toLowerCase())));
+
   return (
     <>
-      <h1>Hi</h1>
-      {countries.map((country) => (
-        <div key={country.name.common}>
-          <h2>{country.name.common}</h2>
-          <img src={country.flags.png} alt={`${country.name.common} flag`} />
-          <p>
-            Population:
-            {country.population}
-          </p>
-          <a href={country.maps.openStreetMaps}>OpenStreetMap</a>
-        </div>
-      ))}
+      <section>
+        <input
+          type="search"
+          className={styles.search}
+          placeholder="Search by country name .."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          required
+        />
+
+        <ul className={styles.listContainer}>
+          {filteredCountries.map((country) => (
+            <CountryCard
+              key={country.name.common}
+              country={country}
+            />
+          ))}
+        </ul>
+      </section>
     </>
   );
 };
 
 HomePage.propTypes = {
-  countries: PropTypes.arrayOf.isRequired,
+  countries: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.shape({
+        common: PropTypes.string.isRequired,
+      }).isRequired,
+      flags: PropTypes.shape({
+        png: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default HomePage;
