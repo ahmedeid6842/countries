@@ -8,6 +8,13 @@ import './styles/App.css';
 
 function App() {
 
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.countries.countries);
+
+  useEffect(() => {
+    dispatch(getCountries());
+  }, [dispatch]);
+
   return (
 
     <>
