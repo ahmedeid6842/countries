@@ -5,7 +5,7 @@ import styles from '../../styles/countryCard.module.css';
 
 const CountryCard = ({ country }) => (
   <li key={country.name.common} className={styles.country}>
-    <Link to={`/${country.name.common}`}>
+    <Link to={`/countries/${country.name.common}`}>
       <figure>
         <img src={country.flags.png} alt={`${country.name.common} flag`} />
         <figcaption>{country.name.common}</figcaption>

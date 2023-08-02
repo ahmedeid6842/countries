@@ -11,7 +11,7 @@ const Header = ({ title }) => (
     <nav className={styles.nav}>
       {title === 'Country Info' && (
         <div className={styles.goBack}>
-          <Link to="/">
+          <Link to="/countries/">
             <img src={leftArrowIcon} alt="Back" />
           </Link>
         </div>
