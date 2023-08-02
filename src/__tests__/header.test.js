@@ -10,7 +10,7 @@ describe('Header', () => {
     const { getByText } = render(
       <Router>
         <Header title={title} />
-      </Router>
+      </Router>,
     );
     expect(getByText(title)).toBeInTheDocument();
   });
@@ -20,7 +20,7 @@ describe('Header', () => {
     const { getByAltText } = render(
       <Router>
         <Header title={title} />
-      </Router>
+      </Router>,
     );
     expect(getByAltText('Back')).toBeInTheDocument();
   });
@@ -30,7 +30,7 @@ describe('Header', () => {
     const { queryByAltText } = render(
       <Router>
         <Header title={title} />
-      </Router>
+      </Router>,
     );
     expect(queryByAltText('Back')).not.toBeInTheDocument();
   });

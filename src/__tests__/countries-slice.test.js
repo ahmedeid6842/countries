@@ -2,7 +2,6 @@ import countriesReducer from '../redux/countries-slice';
 
 jest.mock('axios');
 
-
 const mockCountries = [
   {
     name: {
@@ -40,7 +39,7 @@ describe('countriesSlice', () => {
       expect(
         countriesReducer(undefined, {
           type: 'countries/getCountries/pending',
-        })
+        }),
       ).toEqual({
         countries: [],
         country: null,
@@ -54,7 +53,7 @@ describe('countriesSlice', () => {
         countriesReducer(undefined, {
           type: 'countries/getCountries/fulfilled',
           payload: mockCountries,
-        })
+        }),
       ).toEqual({
         countries: mockCountries,
         country: null,
@@ -68,7 +67,7 @@ describe('countriesSlice', () => {
         countriesReducer(undefined, {
           type: 'countries/getCountries/rejected',
           error: { message: 'Error message' },
-        })
+        }),
       ).toEqual({
         countries: [],
         country: null,
@@ -82,7 +81,7 @@ describe('countriesSlice', () => {
         countriesReducer(undefined, {
           type: 'countries/getCountry/pending',
           meta: { arg: 'United States' },
-        })
+        }),
       ).toEqual({
         countries: [],
         country: null,
@@ -96,7 +95,7 @@ describe('countriesSlice', () => {
         countriesReducer(undefined, {
           type: 'countries/getCountry/fulfilled',
           payload: mockCountry,
-        })
+        }),
       ).toEqual({
         countries: [],
         country: mockCountry,
@@ -110,7 +109,7 @@ describe('countriesSlice', () => {
         countriesReducer(undefined, {
           type: 'countries/getCountry/rejected',
           error: { message: 'Error message' },
-        })
+        }),
       ).toEqual({
         countries: [],
         country: null,

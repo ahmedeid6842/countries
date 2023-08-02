@@ -17,17 +17,17 @@ describe('CountryDetailsPage', () => {
         country: {
           name: {
             common: 'United States',
-            official: "Unitest States"
+            official: 'Unitest States',
           },
           flags: {
             png: 'https://restcountries.com/data/usa.png',
           },
-          area: "1528963",
+          area: '1528963',
           population: 331449281,
-          capital:["New Yourk"],
-          timezones:["UTC-6"],
-          languages:["English","Spanish"],
-          currencies:{USA:{name:"dollar",symbol:"$"}}
+          capital: ['New Yourk'],
+          timezones: ['UTC-6'],
+          languages: ['English', 'Spanish'],
+          currencies: { USA: { name: 'dollar', symbol: '$' } },
         },
       },
     });
@@ -40,7 +40,7 @@ describe('CountryDetailsPage', () => {
         <Router>
           <CountryDetailsPage />
         </Router>
-      </Provider>
+      </Provider>,
     );
     expect(store.dispatch).toHaveBeenCalled();
   });

@@ -30,7 +30,7 @@ describe('CountryInfo', () => {
 
   it('renders the country information correctly', () => {
     const { getByText, getByAltText } = render(
-      <CountryInfo state={state} />
+      <CountryInfo state={state} />,
     );
 
     expect(getByText('United States')).toBeInTheDocument();
@@ -44,7 +44,7 @@ describe('CountryInfo', () => {
     expect(getByText('English')).toBeInTheDocument();
     expect(getByAltText('flag')).toHaveAttribute(
       'src',
-      'https://restcountries.com/data/usa.png'
+      'https://restcountries.com/data/usa.png',
     );
   });
 });

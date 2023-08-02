@@ -18,7 +18,7 @@ describe('CountryCard', () => {
     render(
       <Router>
         <CountryCard country={mockCountry} />
-      </Router>
+      </Router>,
     );
   });
 });
