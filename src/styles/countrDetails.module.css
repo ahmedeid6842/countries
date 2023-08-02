@@ -76,7 +76,6 @@
   background-color: var(--bg-dark-2);
 }
 
-
 @media (max-width: 768px) {
   .detailsTop {
     flex-direction: column;
