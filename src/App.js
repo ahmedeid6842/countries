@@ -19,6 +19,7 @@ function App() {
     <>
       <main>
         <Routes>
+          <Route path="/" element={<HomePage countries={state} />} />
           <Route path="/countries/" element={<HomePage countries={state} />} />
           <Route path="/countries/:countryName" element={<CountryDetailsPage />} />
         </Routes>
