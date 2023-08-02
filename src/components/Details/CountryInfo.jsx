@@ -24,14 +24,14 @@ const CountryInfo = ({ state }) => (
         <span> 🌍 Area: </span>
         <span>
           {+state.area}
-            &nbsp; km2
+          &nbsp; km2
         </span>
       </li>
       <li>
         <span> 👥 Population: </span>
         <span>
           {(state.population / 1000000).toFixed(2)}
-            &nbsp; million
+          &nbsp; million
         </span>
       </li>
       <li>
