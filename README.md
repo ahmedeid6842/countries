@@ -9,6 +9,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [🎥 video presentation](#video-presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -40,6 +41,10 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://ahmedeid6842.github.io/countries/)
+
+## 🎥 Video Presentation <a name="video-presentation"></a>
+
+- [Video Presentation Link](https://www.loom.com/share/b8ce4db3b6d34497911b259822639da5?sid=b488a8af-6b2d-4dc8-b18b-68b57161364a)
 
 ---
 
